@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Viewer</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <div id="ar-scene">
+        <a-scene embedded arjs>
+            <a-marker preset="hiro">
+                <a-entity
+                    gltf-model="url(http://127.0.0.1:8000/media/models/your-model.gltf)"
+                    scale="0.5 0.5 0.5">
+                </a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </div>
+</body>
+</html>
